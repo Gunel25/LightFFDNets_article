@@ -47,10 +47,11 @@ The results demonstrate that **LightFFDNet v1** and **LightFFDNet v2** perform c
 
 # How to Use
 
-## 1. Run the codes from SiStNet-inference.ipynb in Jupyter Notebook.
+## 1. Run the codes from LightFFDNet in Matlab.
 ## 2. For training on custom dataset
-1. This codes load the dataset in YOLO format. You can see an annotation example in './dataset/valid_example/labels' folder.
-2. If you have your own custom dataset with different annotation system, then you can train it by running thecodes in SiStNet.ipynb in jupyter notebook. You can change the codes for your purposes to load the dataset.
+1. Download the dataset as a file to your computer. The link is provided above. Specify the file path and prepare it for MATLAB.
+2. If you have your own custom dataset with a different annotation system, you can train it using the LightFFDNet code in MATLAB. Modify the code as needed to load and use your dataset.
+
 
 # Article
 Access my article from the link below:
