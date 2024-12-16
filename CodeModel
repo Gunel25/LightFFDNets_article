@@ -1,1 +1,170 @@
+%%%%%%%%%    LightFFDNet v1  Dataset2
 
+
+
+% Creating imdsTrain, imdsValidation and imdsTest object
+
+
+imdsTrain = imageDatastore("C:\Users\Gunel\Downloads\Dataset140k__\Train","IncludeSubfolders",true,"LabelSource","foldernames");
+imdsValidation = imageDatastore("C:\Users\Gunel\Downloads\Dataset140k__\Validation","IncludeSubfolders",true,"LabelSource","foldernames");
+imdsTest = imageDatastore("C:\Users\Gunel\Downloads\Dataset140k__\Test","IncludeSubfolders",true,"LabelSource","foldernames");
+% 
+% imagecount = numel(imdsTrain.Files);
+% disp(['datasetdeki resim sayısı:' num2str(imagecount)]);
+inputSize = [224 224 3];
+
+augimdsTrain = augmentedImageDatastore(inputSize(1:3), imdsTrain);
+augimdsValidation = augmentedImageDatastore(inputSize(1:3), imdsValidation);
+augimdsTest = augmentedImageDatastore(inputSize(1:3), imdsTest);
+
+% Create CNN model
+layers = [
+    imageInputLayer([224 224 3])
+
+    convolution2dLayer(3,32,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+
+    maxPooling2dLayer(2,'Stride',2)
+
+    convolution2dLayer(3,64,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+
+    fullyConnectedLayer(2)
+    softmaxLayer
+    classificationLayer];
+
+options = trainingOptions("adam",...
+    "ExecutionEnvironment","auto",...
+    "InitialLearnRate",0.0001,...
+    "MaxEpochs",10 ,...
+    "MiniBatchSize",16 ,...
+    "Shuffle","every-epoch",...
+    "ValidationFrequency",3,...
+    "Plots","training-progress",...
+    "ValidationData",augimdsValidation);
+
+tic
+net = trainNetwork(augimdsTrain,layers,options);
+toc
+
+
+%%%% Test the Model
+
+[YPred,~] = classify(net, augimdsTest);
+
+YTest = imdsTest.Labels;
+accuracy = mean(YPred == YTest);
+disp('  ');
+disp('  ');
+disp('Test accuracy: ');
+disp(['accuracy =  ' num2str(accuracy)]);
+disp('  ');
+
+
+%%%% Plot Network
+% 
+% lgraph = layerGraph(layers)
+% figure
+% plot(lgraph)
+
+
+
+%%%% Display some of the images in the datastore.
+% figure;
+% perm = randperm(100,20);
+% for i = 1:20
+%     subplot(4,5,i);
+%     imshow(imdsTrain.Files{perm(i)});
+% end
+
+
+
+
+
+
+
+
+%%%%%%%%%    LightFFDNet v2  Dataset1
+
+
+%clear
+ imds = imageDatastore("C:\Users\Gunel\Downloads\Fake_real","IncludeSubfolders",true,"LabelSource","foldernames");
+ imds.ReadFcn = @(loc)imresize(imread(loc),[224,224]); %Resize images to specific dimensions
+
+% % Parse Data
+%  cv = cvpartition(imds.Labels, 'HoldOut', 0.3, 'Stratify', true); % Stratified veri bölme
+%  imdsTrain = subset(imds, cv.training);
+%  imdsValidation = subset(imds, cv.test);
+%  imdsTest = subset(imds, cv.validation);
+
+%[imds1, imds2] = splitEachLabel(imds,5)
+ [imdsTrain, imdsValidation, imdsTest] = splitEachLabel(imds, 0.1, 0.2) %10-Validation, 20-Test, 70-Train
+%[imdsTrain, imdsValidation] = splitEachLabel(imds, 0.3)
+
+
+% Designing a CNN model
+
+layers = [
+    imageInputLayer([224 224 3])
+
+    convolution2dLayer(3,32,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+
+    maxPooling2dLayer(2,'Stride',2)
+
+    convolution2dLayer(3,64,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+
+    maxPooling2dLayer(2,'Stride',2)
+
+    convolution2dLayer(3,128,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+    
+    maxPooling2dLayer(2,'Stride',2)
+    
+    convolution2dLayer(3,256,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+ 
+    maxPooling2dLayer(2,'Stride',2)
+     
+    convolution2dLayer(3,512,'Padding','same')
+    batchNormalizationLayer
+    reluLayer
+
+    fullyConnectedLayer(2)
+    softmaxLayer
+    classificationLayer];
+
+options = trainingOptions("adam",...
+    "ExecutionEnvironment","auto",...
+    "InitialLearnRate",0.0001,...
+    "MaxEpochs",10,...
+    "MiniBatchSize",16,...
+    "Shuffle","every-epoch",...
+    "ValidationFrequency",3,...
+    "Plots","training-progress",...
+    "ValidationData",imdsValidation);
+
+net = trainNetwork(imdsTrain,layers,options);
+
+
+%% Test the Model
+    
+    [YPred,~] = classify(net,imdsTest);
+    
+    YTest = imdsTest.Labels;
+    accuracy = mean(YPred == YTest);
+    disp('  ');
+    disp('  ');
+    disp('Test accuracy: ');
+    disp(['accuracy = ' num2str(accuracy)]);
+    disp('  ');
+
+    
+   
