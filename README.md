@@ -45,4 +45,4 @@ The results demonstrate that **LightFFDNet v1** and **LightFFDNet v2** perform c
 ```markdown
 ## DOI for this Repository
 This project is assigned a DOI to enable citation:
-[DOI: 10.5281/zenodo.1234567](https://zenodo.org/record/1234567)
+[DOI: 10.5281/zenodo.1234567](https://zenodo.org/records/14499827/preview/Gunel25/LightFFDNets_article-v1.0.zip?include_deleted=0#tree_item0)
