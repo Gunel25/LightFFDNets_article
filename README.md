@@ -1,6 +1,9 @@
 ## About the Project  
 Accurate and rapid facial forgery detection is essential in fields like **artificial intelligence**, **image processing**, and **object detection**. This project introduces **LightFFDNet v1** and **LightFFDNet v2**, two lightweight convolutional neural network models designed to efficiently detect facial forgeries.  
 
+# LightFFDNet
+LightFFDNet: Lightweight CNNs for Efficient Facial Forgery Detection
+
 The key contributions of this project are:  
 1. **LightFFDNet v1**:  
    - Only two convolutional layers.  
@@ -42,3 +45,32 @@ Additionally, we compare our models with eight pretrained CNN architectures to a
    
 The results demonstrate that **LightFFDNet v1** and **LightFFDNet v2** perform competitively with these pretrained models while maintaining high computational efficiency.
 
+# How to Use
+
+## 1. Run the codes from SiStNet-inference.ipynb in Jupyter Notebook.
+## 2. For training on custom dataset
+1. This codes load the dataset in YOLO format. You can see an annotation example in './dataset/valid_example/labels' folder.
+2. If you have your own custom dataset with different annotation system, then you can train it by running thecodes in SiStNet.ipynb in jupyter notebook. You can change the codes for your purposes to load the dataset.
+
+# Article
+Access my article from the link below:
+
+    https://doi.org/10.48550/arXiv.2401.17972
+
+# Citation
+Please cite as:
+
+    @INPROCEEDINGS{
+      Azadvatan2024arXiv,
+      author={Azadvatan, Yashar and Kurt, Murat},
+      title = {MelNet: A Real-Time Deep Learning Algorithm for Object Detection},
+      journal = {arXiv preprint arXiv:2401.17972},
+      pages = {arXiv:2401.17972},
+      year = {2024},
+      month = jan,
+      eid = {arXiv:2401.17972},
+      doi = {10.48550/arXiv.2401.17972},
+      url = {https://doi.org/10.48550/arXiv.2401.17972}, 
+      archivePrefix = {arXiv},
+      eprint = {2401.17972}
+    }
