@@ -39,10 +39,9 @@ Additionally, we compare our models with eight pretrained CNN architectures to a
 6. **MobileNetV2**
 7. **Alexnet**
 8. **DarkNet-53**
-https://zenodo.org/records/14499827
 The results demonstrate that **LightFFDNet v1** and **LightFFDNet v2** perform competitively with these pretrained models while maintaining high computational efficiency.
 
 ```markdown
 ## DOI for this Repository
 This project is assigned a DOI to enable citation:
-[DOI: 10.5281/zenodo.14499827](https://zenodo.org/records/14499827)
+[DOI: 10.5281/zenodo.14499827]([https://zenodo.org/records/14499827](https://zenodo.org/records/14499827))
