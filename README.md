@@ -55,23 +55,23 @@ The results demonstrate that **LightFFDNet v1** and **LightFFDNet v2** perform c
 
 # Article
 Access my article from the link below:
-
-    https://doi.org/10.48550/arXiv.2401.17972
+   
+https://doi.org/10.48550/arXiv.2411.11826
 
 # Citation
 Please cite as:
 
     @INPROCEEDINGS{
-      Azadvatan2024arXiv,
-      author={Azadvatan, Yashar and Kurt, Murat},
-      title = {MelNet: A Real-Time Deep Learning Algorithm for Object Detection},
-      journal = {arXiv preprint arXiv:2401.17972},
-      pages = {arXiv:2401.17972},
+      Jabbarli2024arXiv,
+      author={Jabbarli, Gunel and Kurt, Murat},
+      title = {LightFFDNets: Lightweight Convolutional Neural Networks for Rapid Facial Forgery Detection},
+      journal = {arXiv preprint arXiv:2411.11826},
+      pages = {arXiv:2411.11826},
       year = {2024},
-      month = jan,
-      eid = {arXiv:2401.17972},
-      doi = {10.48550/arXiv.2401.17972},
-      url = {https://doi.org/10.48550/arXiv.2401.17972}, 
+      month = nov,
+      eid = {arXiv:2411.11826},
+      doi = {10.48550/arXiv.2411.11826},
+      url = {https://doi.org/10.48550/arXiv.2411.11826}, 
       archivePrefix = {arXiv},
-      eprint = {2401.17972}
-    }
+      eprint = {2411.11826}
+}
