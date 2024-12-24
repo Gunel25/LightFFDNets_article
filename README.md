@@ -22,7 +22,7 @@ The models were evaluated using the **Fake-Vs-Real-Faces (Hard)** and **140k Rea
 
 This project utilizes two datasets, described below:  
 
-### 1. **Fake-Vs-Real-Faces (Hard) Dataset**  
+### 1. **Fake-Vs-Real-Faces (Hard) Dataset(#)**  
 - The dataset was downloaded as a whole and split into **70% train**, **20% test**, and **10% validation** using code.  
 - The splitting process is implemented in the provided code examples.  
 
