@@ -1,16 +1,15 @@
-%%%%%%%%%     **LightFFDNet v1**  Dataset2
+%%%%%%%%%                       **LightFFDNet v1**  Dataset2
 
 
 
 % Creating imdsTrain, imdsValidation and imdsTest object
 
-
 imdsTrain = imageDatastore("C:\Users\Gunel\Downloads\Dataset140k__\Train","IncludeSubfolders",true,"LabelSource","foldernames");
 imdsValidation = imageDatastore("C:\Users\Gunel\Downloads\Dataset140k__\Validation","IncludeSubfolders",true,"LabelSource","foldernames");
 imdsTest = imageDatastore("C:\Users\Gunel\Downloads\Dataset140k__\Test","IncludeSubfolders",true,"LabelSource","foldernames");
-% 
+
 % imagecount = numel(imdsTrain.Files);
-% disp(['datasetdeki resim sayısı:' num2str(imagecount)]);
+% disp(['İmage count in dataset:' num2str(imagecount)]);
 inputSize = [224 224 3];
 
 augimdsTrain = augmentedImageDatastore(inputSize(1:3), imdsTrain);
@@ -62,14 +61,11 @@ disp('Test accuracy: ');
 disp(['accuracy =  ' num2str(accuracy)]);
 disp('  ');
 
-
 %%%% Plot Network
 % 
 % lgraph = layerGraph(layers)
 % figure
 % plot(lgraph)
-
-
 
 %%%% Display some of the images in the datastore.
 % figure;
@@ -85,10 +81,7 @@ disp('  ');
 
 
 
-
-%%%%%%%%%    LightFFDNet v2  Dataset1
-
-
+%%%%%%%%%                               **LightFFDNet v1**  Dataset1
 %clear
  imds = imageDatastore("C:\Users\Gunel\Downloads\Fake_real","IncludeSubfolders",true,"LabelSource","foldernames");
  imds.ReadFcn = @(loc)imresize(imread(loc),[224,224]); %Resize images to specific dimensions
@@ -106,6 +99,7 @@ disp('  ');
 
 % Designing a CNN model
 
+% Create CNN model
 layers = [
     imageInputLayer([224 224 3])
 
@@ -116,24 +110,6 @@ layers = [
     maxPooling2dLayer(2,'Stride',2)
 
     convolution2dLayer(3,64,'Padding','same')
-    batchNormalizationLayer
-    reluLayer
-
-    maxPooling2dLayer(2,'Stride',2)
-
-    convolution2dLayer(3,128,'Padding','same')
-    batchNormalizationLayer
-    reluLayer
-    
-    maxPooling2dLayer(2,'Stride',2)
-    
-    convolution2dLayer(3,256,'Padding','same')
-    batchNormalizationLayer
-    reluLayer
- 
-    maxPooling2dLayer(2,'Stride',2)
-     
-    convolution2dLayer(3,512,'Padding','same')
     batchNormalizationLayer
     reluLayer
 
@@ -166,5 +142,12 @@ net = trainNetwork(imdsTrain,layers,options);
     disp(['accuracy = ' num2str(accuracy)]);
     disp('  ');
 
-    
-   
+
+
+
+
+
+
+
+
+
