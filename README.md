@@ -146,13 +146,32 @@ This project utilizes two datasets, described below:
 - Validation and Testing: Accuracy during training and testing phases is ensured.
 
 ---
+# Explanation: Using Flexible Code Structure for Transfer Learning Models
+This code is designed to work with various transfer learning models. The main idea is that certain sections of the code must be activated (i.e., uncommented) based on the chosen model. Key parts that vary according to the selected model are as follows:
+
+# 1. Model Selection:
+At the beginning of the code, there is a model selection section. Only activate the model you intend to use.
+For example, to use MobileNetV2, activate the following line:
+- net = mobilenetv2;
+# 2. Modifying Layers:
+Each model has unique names for its final layers. Activate the appropriate layer modification steps based on your chosen model:
+
+- For example, MobileNetV2:
+- lgraph = replaceLayer(lgraph,'Logits',newLearnableLayer);
+- lgraph = replaceLayer(lgraph,'ClassificationLayer_Logits',newClassLayer);
+
+For other models, refer to the relevant layer names provided in the code and activate the corresponding layer modification sections.
+
+# 3. Dataset Selection:
+Each model has its own dataset loading and splitting procedure as shown in earlier sections. There is no need to modify the dataset loading part since the code has been generalized for all models.
+
+# 4. Training and Testing:
+Once the model is selected and adjusted, the remaining code (training options, model training, and testing) remains unchanged and works automatically.
+
+This structure allows you to switch flexibly between different transfer learning models. Simply choose the model and activate the corresponding layer modification sections to adapt the code for your desired model.
 
 
-
-
-
-
-
+---
 # Article
 Access my article from the link below:
    
