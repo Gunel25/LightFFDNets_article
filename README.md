@@ -140,7 +140,6 @@ This project utilizes two datasets, described below:
 - **Epochs**: Maximum of 10 iterations.  
 - **Batch Size**: 16 (to optimize memory usage).  
 
----
 
 ### 4. Reproducibility of Experiments
 - Image data is read using the `imageDatastore` object, which automatically loads and labels images stored in subfolders.  
