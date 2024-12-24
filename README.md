@@ -18,15 +18,27 @@ The models were evaluated using the **Fake-Vs-Real-Faces (Hard)** and **140k Rea
 
 ---
 
+## Dataset Information  
 
-## Datasets  
-The following datasets were used for evaluation:  
+This project utilizes two datasets, described below:  
 
-1. **Fake-Vs-Real-Faces (Hard)**  
-   - [Dataset Link](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces)  
+### 1. **Fake-Vs-Real-Faces (Hard) Dataset**  
+- The dataset was downloaded as a whole and split into **70% train**, **20% test**, and **10% validation** using code.  
+- The splitting process is implemented in the provided code examples.  
 
-2. **140k Real and Fake Faces**  
-   - [Dataset Link](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces)  
+### 2. **140k Real and Fake Faces Dataset**  
+- This dataset was already pre-split on the computer into the following proportions:  
+  - **70% train**,  
+  - **20% test**,  
+  - **10% validation**.  
+- No additional splitting was performed using the code.  
+
+The corresponding code and examples for processing both datasets are provided. You can download the datasets using the following links:  
+ **[Fake-Vs-Real-Faces (Hard) Dataset](#)**  
+ - [Dataset Link](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces)
+ **[140k Real and Fake Faces Dataset](#)**
+    - [Dataset Link](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces)  
+
 
 
 ---
