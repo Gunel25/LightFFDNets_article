@@ -1,4 +1,4 @@
-## About the Project  
+# About the Project  
 Accurate and rapid facial forgery detection is essential in fields like artificial intelligence, image processing, and object detection. This project introduces LightFFDNet v1 and LightFFDNet v2, two lightweight convolutional neural network models designed to efficiently detect facial forgeries. Additionally, the performance of these models has been compared with 8 pretrained CNN architectures, showcasing their effectiveness and superiority in various aspects of forgery detection, such as accuracy, processing speed, and resource utilization.
 
 # LightFFDNet
@@ -61,9 +61,9 @@ This project utilizes two datasets, described below:
 
 
 ---
-# How to Use
+## How to Use
 
-## 1. Run the Codes for LightFFDNet v1 or LightFFDNet v2 in MATLAB
+### Run the Codes for LightFFDNet v1 or LightFFDNet v2 in MATLAB
 
 - **LightFFDNet v1**: Designed for faster training with fewer layers.  
 - **LightFFDNet v2**: Includes additional layers for improved feature extraction and higher accuracy.
@@ -146,7 +146,7 @@ This project utilizes two datasets, described below:
 - Validation and Testing: Accuracy during training and testing phases is ensured.
 
 ---
-# Explanation: Using Flexible Code Structure for Transfer Learning Models
+## Explanation: Using Flexible Code Structure for Transfer Learning Models
 Run the Codes from "Models Transfer Learning" in MATLAB. This code is designed to work with various transfer learning models. The main idea is that certain sections of the code must be activated (i.e., uncommented) based on the chosen model. Key parts that vary according to the selected model are as follows:
 
 ### 1. Model Selection:
