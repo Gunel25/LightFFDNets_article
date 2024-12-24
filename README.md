@@ -63,9 +63,10 @@ This project utilizes two datasets, described below:
 ---
 # How to Use
 
-## 1. Run the Codes from LightFFDNet v1 in MATLAB
+## 1. Run the Codes for LightFFDNet v1 or LightFFDNet v2 in MATLAB
 
-To use the LightFFDNet v1 model for training and testing on your dataset, follow these steps:
+- **LightFFDNet v1**: Designed for faster training with fewer layers.  
+- **LightFFDNet v2**: Includes additional layers for improved feature extraction and higher accuracy.
 
 ### 1.1 Prepare Your Dataset:
 - Ensure your dataset (e.g., "140k Real and Fake Faces Dataset" or "Fake-Vs-Real-Faces (Hard) Dataset") is organized with images in subfolders. Each subfolder should represent a class (e.g., "Real" and "Fake").
@@ -105,15 +106,6 @@ By following these steps, you can train and evaluate the **LightFFDNet v1** mode
 
 
 
-
-
-
-# How to Use
-
-## 1. Run the codes from LightFFDNet in Matlab.
-## 2. For training on custom dataset
-1. Download the dataset as a file to your computer. The link is provided above. Specify the file path and prepare it for MATLAB.
-2. If you have your own custom dataset with a different annotation system, you can train it using the LightFFDNet code in MATLAB. Modify the code as needed to load and use your dataset.
 
 
 # Article
