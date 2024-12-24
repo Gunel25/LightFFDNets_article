@@ -31,7 +31,7 @@ The performance of LightFFDNet v1 and LightFFDNet v2 has been compared with 8 pr
 8. **DarkNet-53**
 
 The results demonstrate that LightFFDNet models outperform these existing models in key metrics such as accuracy, speed, and resource efficiency.
-For a detailed explanation of the comparison, including training/test splits and additional metrics, please refer to the [full paper](https://doi.org/10.48550/arXiv.2411.11826)  
+For a detailed explanation of the comparison, including training/test splits and additional metrics, please refer to the [full paper](https://doi.org/10.48550/arXiv.2411.11826).
 
 
 
@@ -44,17 +44,18 @@ For a detailed explanation of the comparison, including training/test splits and
 This project utilizes two datasets, described below:  
 
 ### <span style="color:blue">1. **Fake-Vs-Real-Faces (Hard) Dataset**</span>  
-- The dataset was downloaded as a whole and split into **70% train**, **20% test**, and **10% validation** using code.  
-- The splitting process is implemented in the provided code examples.  
+- The dataset was downloaded as a whole and saved as a file on the local machine.
+- The dataset was split into 70% train, 20% test, and 10% validation using the provided code.
+- The splitting process is implemented in the provided code examples, which load the dataset from the local directory.
 - [Download Fake-Vs-Real-Faces (Hard) Dataset](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces)  
 
 ### <span style="color:green">2. **140k Real and Fake Faces Dataset**</span>  
-- Only a subset of the dataset, equivalent to the size of the **Fake-Vs-Real-Faces (Hard) Dataset**, was used in this project.  
-- This dataset was already pre-split on the computer into the following proportions:  
-  - **70% train**,  
-  - **20% test**,  
-  - **10% validation**.  
-- No additional splitting was performed using the code.  
+- A subset of this dataset, equivalent in size to the Fake-Vs-Real-Faces (Hard) dataset, was used in this project.  
+- This dataset was already pre-split into the following proportions on the local machine:
+     70% train
+     20% test
+     10% validation
+- No additional splitting was performed using the code; the dataset is loaded directly from the local directory.  
 - [Download 140k Real and Fake Faces Dataset](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces)  
 
 
