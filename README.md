@@ -97,10 +97,58 @@ This project utilizes two datasets, described below:
 ### 1.6 Monitor Training Progress:
 - During the training process, you can monitor the model's progress through training plots. These plots will help you visualize the learning curve and assess the model's performance.
 
-By following these steps, you can train and evaluate the **LightFFDNet v1** model using your dataset in MATLAB.
 
+## Model Overview and Implementation Details
 
+### 1. Execution Environment
+- **Required Software**: MATLAB R2021b or later.  
+- **Necessary Toolbox**: MATLAB Deep Learning Toolbox.  
+- **Dataset**: Dataset2 (divided into Train, Validation, and Test).  
+- **Input Dimensions**: `[224, 224, 3]` pixels (RGB images).  
 
+---
+
+### 2. Key Algorithms and Principles of the Model
+#### Layers
+- **Input Layer**:
+  - Dimensions: `[224 x 224 x 3]`.
+  - Processes images in RGB format.
+- **Convolutional Layers**:
+  - **For LightFFDNet v1**:
+    - First Layer: 32 filters of size `3x3` with 'same' padding, extracting image features.
+    - Second Layer: 64 filters of size `3x3`, focusing on higher-level features.
+  - **For LightFFDNet v2**:
+    - First Layer: 32 filters of size `3x3` with 'same' padding, extracting image features.
+    - Second Layer: 64 filters of size `3x3`, focusing on intermediate-level features.
+    - Third Layer: 128 filters of size `3x3` for deeper feature extraction.
+    - Fourth Layer: 256 filters of size `3x3` to capture complex patterns.
+    - Fifth Layer: 512 filters of size `3x3` for detailed feature learning.
+- **Activation Function**:
+  - **ReLU (Rectified Linear Unit)**: Replaces negative values with zero, improving computational efficiency.
+- **Pooling Layer**:
+  - **Max Pooling (2x2 size)**: Reduces feature dimensions and minimizes noise.
+- **Fully Connected Layer**:
+  - Maps features to two classes (for classification purposes).
+- **Softmax Layer**:
+  - Outputs class probabilities.
+- **Classification Layer**:
+  - Selects the class with the highest probability.
+
+---
+
+### 3. Optimization Method
+- **Optimizer**: Adam (Adaptive Moment Estimation).  
+- **Learning Rate**: `0.0001` (fixed).  
+- **Epochs**: Maximum of 10 iterations.  
+- **Batch Size**: 16 (to optimize memory usage).  
+
+---
+
+### 4. Reproducibility of Experiments
+- Image data is read using the `imageDatastore` object, which automatically loads and labels images stored in subfolders.  
+- Validation and Testing: Accuracy during training and testing phases is ensured.
+
+---
 
 
 
