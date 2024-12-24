@@ -97,7 +97,7 @@ This project utilizes two datasets, described below:
 ### 1.6 Monitor Training Progress:
 - During the training process, you can monitor the model's progress through training plots. These plots will help you visualize the learning curve and assess the model's performance.
 
-
+---
 ## Model Overview and Implementation Details
 
 ### 1. Execution Environment
@@ -106,7 +106,6 @@ This project utilizes two datasets, described below:
 - **Dataset**: Dataset2 (divided into Train, Validation, and Test).  
 - **Input Dimensions**: `[224, 224, 3]` pixels (RGB images).  
 
----
 
 ### 2. Key Algorithms and Principles of the Model
 #### Layers
