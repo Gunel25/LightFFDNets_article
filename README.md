@@ -52,8 +52,8 @@ This project utilizes two datasets, described below:
 ### <span style="color:green">2. **140k Real and Fake Faces Dataset**</span>  
 - A subset of this dataset, equivalent in size to the Fake-Vs-Real-Faces (Hard) dataset, was used in this project.  
 - This dataset was already pre-split into the following proportions on the local machine:
-     70% train
-     20% test
+     70% train,
+     20% test,
      10% validation
 - No additional splitting was performed using the code; the dataset is loaded directly from the local directory.  
 - [Download 140k Real and Fake Faces Dataset](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces)  
