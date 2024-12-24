@@ -1,5 +1,5 @@
 ## About the Project  
-Accurate and rapid facial forgery detection is essential in fields like artificial intelligence, image processing, and object detection. This project introduces LightFFDNet v1 and LightFFDNet v2, two lightweight convolutional neural network models designed to efficiently detect facial forgeries. Additionally, the performance of these models has been compared with 8 other existing models, showcasing their effectiveness and superiority in various aspects of forgery detection, such as accuracy, processing speed, and resource utilization.
+Accurate and rapid facial forgery detection is essential in fields like artificial intelligence, image processing, and object detection. This project introduces LightFFDNet v1 and LightFFDNet v2, two lightweight convolutional neural network models designed to efficiently detect facial forgeries. Additionally, the performance of these models has been compared with 8 pretrained CNN architectures, showcasing their effectiveness and superiority in various aspects of forgery detection, such as accuracy, processing speed, and resource utilization.
 
 # LightFFDNet
 LightFFDNet: Lightweight CNNs for Efficient Facial Forgery Detection
@@ -31,7 +31,9 @@ The performance of LightFFDNet v1 and LightFFDNet v2 has been compared with 8 pr
 8. **DarkNet-53**
 
 The results demonstrate that LightFFDNet models outperform these existing models in key metrics such as accuracy, speed, and resource efficiency.
-For a detailed explanation of the comparison, including training/test splits and additional metrics, please refer to the full paper.
+For a detailed explanation of the comparison, including training/test splits and additional metrics, please refer to the 
+- [full paper](https://doi.org/10.48550/arXiv.2411.11826)  
+
 https://doi.org/10.48550/arXiv.2411.11826
 
 
@@ -60,20 +62,6 @@ This project utilizes two datasets, described below:
 
 
 ---
-
-
-Additionally, we compare our models with eight pretrained CNN architectures to assess their performance. The following CNN architectures were used for comparison:
-
-1. **ResNet-50**
-2. **ResNet-101**
-3. **VGG-16**
-4. **VGG-19**
-5. **GoogleNet**
-6. **MobileNetV2**
-7. **Alexnet**
-8. **DarkNet-53**
-   
-The results demonstrate that **LightFFDNet v1** and **LightFFDNet v2** perform competitively with these pretrained models while maintaining high computational efficiency.
 
 # How to Use
 
