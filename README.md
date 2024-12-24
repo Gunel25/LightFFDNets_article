@@ -61,6 +61,40 @@ This project utilizes two datasets, described below:
 
 
 ---
+How to Use
+1. Run the Codes from LightFFDNet v1 in MATLAB
+To use the LightFFDNet v1 model for training and testing on the chosen dataset, follow these steps:
+
+Prepare Your Dataset:
+
+Ensure your dataset (e.g., "140k Real and Fake Faces Dataset" or "Fake-Vs-Real-Faces (Hard) Dataset") is organized with images in subfolders, where each subfolder represents a class (e.g., "Real" and "Fake").
+The dataset should have directories for training, validation, and testing (with respective images).
+Modify Dataset Path:
+
+Update the dataset path in the code to point to the location where your dataset is stored on your computer. The paths should be specified for each dataset (train, validation, test).
+Resize the Images:
+
+Ensure that all images are resized to the specified input size (224x224x3 pixels) to be compatible with the model. This resizing can be done automatically during the data preprocessing step in the code.
+Create and Train the Model:
+
+Run the code to define the CNN architecture. The model will then be trained using the training data and validated on the validation set.
+The training will proceed based on the specified configuration, such as learning rate and number of epochs.
+Test the Model:
+
+After training, test the model’s performance on the test dataset. The accuracy will be computed by comparing the predicted labels with the true labels of the test set.
+Monitor Training Progress:
+
+During the training process, monitor the progress through training plots. These plots will help you visualize the model’s learning curve and assess its performance.
+
+
+
+
+
+
+
+
+
+
 
 # How to Use
 
