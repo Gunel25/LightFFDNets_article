@@ -81,7 +81,7 @@ disp('  ');
 
 
 
-%%%%%%%%%                               **LightFFDNet v1**  Dataset1
+%%%%%%%%%                               **LightFFDNet v1**  Fake-Vs-Real-Faces (Hard) Dataset
 %clear
  imds = imageDatastore("C:\Users\Gunel\Downloads\Fake_real","IncludeSubfolders",true,"LabelSource","foldernames");
  imds.ReadFcn = @(loc)imresize(imread(loc),[224,224]); %Resize images to specific dimensions
