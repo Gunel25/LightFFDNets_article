@@ -133,7 +133,6 @@ This project utilizes two datasets, described below:
 - **Classification Layer**:
   - Selects the class with the highest probability.
 
----
 
 ### 3. Optimization Method
 - **Optimizer**: Adam (Adaptive Moment Estimation).  
