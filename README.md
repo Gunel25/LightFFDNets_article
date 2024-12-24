@@ -28,6 +28,7 @@ This project utilizes two datasets, described below:
 - [Download Fake-Vs-Real-Faces (Hard) Dataset](https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces)  
 
 ### <span style="color:green">2. **140k Real and Fake Faces Dataset**</span>  
+- Only a subset of the dataset, equivalent to the size of the **Fake-Vs-Real-Faces (Hard) Dataset**, was used in this project.  
 - This dataset was already pre-split on the computer into the following proportions:  
   - **70% train**,  
   - **20% test**,  
