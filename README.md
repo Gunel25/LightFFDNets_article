@@ -69,7 +69,16 @@ To use the LightFFDNet v1 model for training and testing on your dataset, follow
 
 ### 1.1 Prepare Your Dataset:
 - Ensure your dataset (e.g., "140k Real and Fake Faces Dataset" or "Fake-Vs-Real-Faces (Hard) Dataset") is organized with images in subfolders. Each subfolder should represent a class (e.g., "Real" and "Fake").
-- The dataset should include directories for training, validation, and testing with the respective images.
+- Ensure your dataset is structured as follows:
+  - **For the "140k Real and Fake Faces Dataset":**
+    - The dataset should include the following folders:
+      - **Train**: Contains training images categorized into subfolders (e.g., "Real" and "Fake").
+      - **Validation**: Contains validation images, also categorized into subfolders.
+      - **Test**: Contains test images with the same class-based subfolder structure.
+  
+  - **For the "Fake-Vs-Real-Faces (Hard) Dataset":**
+    - Ensure the images are resized to `[224x224x3]` pixels to maintain consistency with the model’s input requirements.
+
 
 ### 1.2 Modify Dataset Path:
 - Update the dataset path in the code to point to the location where your dataset is stored on your computer. Make sure to specify the paths for each dataset (train, validation, test) in the respective sections of the code.
