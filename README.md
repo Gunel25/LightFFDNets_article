@@ -31,10 +31,8 @@ The performance of LightFFDNet v1 and LightFFDNet v2 has been compared with 8 pr
 8. **DarkNet-53**
 
 The results demonstrate that LightFFDNet models outperform these existing models in key metrics such as accuracy, speed, and resource efficiency.
-For a detailed explanation of the comparison, including training/test splits and additional metrics, please refer to the 
-- [full paper](https://doi.org/10.48550/arXiv.2411.11826)  
+For a detailed explanation of the comparison, including training/test splits and additional metrics, please refer to the [full paper](https://doi.org/10.48550/arXiv.2411.11826)  
 
-https://doi.org/10.48550/arXiv.2411.11826
 
 
 
