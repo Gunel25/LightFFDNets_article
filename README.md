@@ -165,7 +165,7 @@ https://doi.org/10.48550/arXiv.2411.11826
 Please cite as:
 
     @INPROCEEDINGS{
-      Jabbarli2024arXiv,
+      JabbarliG2024arXiv,
       author={Jabbarli, Gunel and Kurt, Murat},
       title = {LightFFDNets: Lightweight Convolutional Neural Networks for Rapid Facial Forgery Detection},
       journal = {arXiv preprint arXiv:2411.11826},
